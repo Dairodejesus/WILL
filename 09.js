@@ -24,9 +24,38 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+  Array.prototype.filtrar = function (callback){
+    console.log(this);
+    const newArr = [];
+    for (let elemento of this){
+      console.log(elemento)
+      if (callback(elemento)) newArr.push(elemento)
+    }
+    return newArr;
+  }
 
 };
+/* filtrar ();
+var productos = [{
+    price: 100,
+    name: 'tv'
+  }, {
+    price: 50,
+    name: 'phone'
+  }, {
+    price: 30,
+    name: 'lamp'
+  }];
 
+  console.log(
+    "productos.filtrar(function(p)"
+  )
+
+  console.log(
+    productos.filtrar(function(p) {
+    return p.price >= 50;
+  })
+  ); */
 // No modifiques nada debajo de esta linea //
 
 module.exports = filtrar

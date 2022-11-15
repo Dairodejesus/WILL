@@ -12,10 +12,25 @@ function buscarAmigo(amigos, nombre) {
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
+  var objeto = {};
+  //for (var i = 0; i<amigos.length; i++){
+   // console.log(amigos[i].nombre)
+    //if (nombre === amigos[i].nombre){
+     // objeto = amigos[i];
+    //}
+  //}
 
-  // Tu código aca:
-  
+  // Tu código aca:()
+  for (let e in amigos){
+    if (nombre=== amigos[e].nombre){
+      objeto = amigos[e]
+    }
+  }
+  return objeto
 }
+
+//var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }]
+//console.log(buscarAmigo(amigos,"toni"))
 
 // No modifiques nada debajo de esta linea //
 

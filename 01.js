@@ -4,6 +4,7 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
+
 function soloNumeros(array) {
   // La funcion llamada 'soloNumeros' recibe como argumento un arreglo de enteros y strings llamado 'array'.
   // Debe devolver un arreglo con solo los enteros.
@@ -11,10 +12,18 @@ function soloNumeros(array) {
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
-
+  var array2= [];
+  for (var i=0; i<array.length; i++){
+    if (typeof array[i] === "number"){
+      array2.push(array[i])
+    }
+  }
+  return array2;
 }
 
-// No modifiques nada debajo de esta linea //
+
+
+// No modifiquesnod nada debajo de esta linea //
 
 
 module.exports = soloNumeros
